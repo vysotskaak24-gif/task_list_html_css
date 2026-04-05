@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Список завдань</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Список завдань</h2>
+
+    <ul class="task-list">
+        <li>
+            <span class="circle"></span>
+            Опанувати HTML та CSS
+        </li>
+
+        <li>
+            <span class="circle"></span>
+            Опанувати Git та GitHub
+        </li>
+
+        <li>
+            <span class="circle"></span>
+            Опанувати JavaScript
+        </li>
+
+        <li>
+            <span class="circle"></span>
+            Опанувати Node.js
+        </li>
+    </ul>
+</div>
+
+<script>
+    const tasks = document.querySelectorAll(".task-list li");
+
+    tasks.forEach(task => {
+        task.addEventListener("click", () => {
+            task.classList.toggle("done");
+        });
+    });
+</script>
+
+</body>
+</html>
